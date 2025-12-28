@@ -64,7 +64,6 @@ return {
 	    -- Setup each LSP server
 	    local lspconfig = require("lspconfig")
 	    local servers = {
-		"lua_ls",
 		"pyright",
 		"clangd",
 		"zls",
