@@ -1,3 +1,4 @@
+require("config.embedded")
 require("config.autocentering")
 require("config.typst-template")
 -- Filter out lspconfig deprecation warnings
