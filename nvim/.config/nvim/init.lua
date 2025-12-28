@@ -1,3 +1,12 @@
+--
+-- Filter out lspconfig deprecation warnings
+local notify = vim.notify
+vim.notify = function(msg, ...)
+  if msg:match("lspconfig") then
+    return
+  end
+  notify(msg, ...)
+end
 -- Global leader key and local one
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
