@@ -9,10 +9,3 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Half page down (centered)" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Half page up (centered)" })
 vim.keymap.set("n", "<C-o>", "<C-o>zz", { desc = "Jump back (centered)" })
 vim.keymap.set("n", "<C-i>", "<C-i>zz", { desc = "Jump forward (centered)" })
-
--- Auto-center after LSP jumps (go to definition, etc.)
-vim.api.nvim_create_autocmd("BufEnter", {
-  callback = function()
-    vim.cmd("normal! zz")
-  end,
-})
