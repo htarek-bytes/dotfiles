@@ -1,0 +1,1 @@
+require("config.typst-template")
