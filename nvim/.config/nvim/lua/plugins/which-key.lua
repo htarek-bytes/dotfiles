@@ -4,7 +4,7 @@ return {
   config = function()
     local wk = require("which-key")
     wk.setup({
-      preset = "modern", -- Floating window style
+      preset = "helix", -- Floating window style
       delay = 500,
 
       -- DISABLE menus for basic Vim features if they feel "broken"

@@ -1,4 +1,4 @@
--- Nvim-autopairs: Auto-close brackets, quotes, etc.
+-- Nvim-autopairs: Auto-close brackets, quotes, etc.autopairs.lua
 return {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
@@ -16,16 +16,6 @@ return {
 	    -- Don't auto-pair if next character is alphanumeric
 	    enable_check_bracket_line = true,
 	    -- Fast wrap with Alt+e: select text and press Alt+e to wrap in brackets
-	    fast_wrap = {
-		map = "<M-e>",
-		chars = { "{", "[", "(", '"', "'" },
-		pattern = [=[[%'%"%)%>%]%)%}%,]]=],
-		end_key = "$",
-		keys = "qwertyuiopzxcvbnmasdfghjkl",
-		check_comma = true,
-		highlight = "Search",
-		highlight_grey = "Comment",
-	    },
 	})
 
 	-- Add custom rule: $ pairs ONLY in Typst files
