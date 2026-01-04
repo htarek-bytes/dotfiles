@@ -14,7 +14,10 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.keymap.set('n', 'E', 'ge', { noremap = true, silent = true })
 vim.keymap.set('n', 'ge', 'E', { noremap = true, silent = true })
+local modes = {'i','v','c','t'}
+vim.keymap.set(modes, '\\\\', [[<C-\><C-n>]], { noremap = true, silent = true})
 
+vim.opt.timeoutlen = 300
 -- Requires
 require("config.lazy")
 require('config.options')
