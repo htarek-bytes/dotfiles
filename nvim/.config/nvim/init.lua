@@ -12,6 +12,9 @@ end
 -- Global leader key and local one
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+vim.keymap.set('n', 'E', 'ge', { noremap = true, silent = true })
+vim.keymap.set('n', 'ge', 'E', { noremap = true, silent = true })
+
 -- Requires
 require("config.lazy")
 require('config.options')
