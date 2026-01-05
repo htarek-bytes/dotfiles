@@ -16,6 +16,11 @@ vim.keymap.set('n', 'E', 'ge', { noremap = true, silent = true })
 vim.keymap.set('n', 'ge', 'E', { noremap = true, silent = true })
 local modes = {'i','v','c','t'}
 vim.keymap.set(modes, '\\\\', [[<C-\><C-n>]], { noremap = true, silent = true})
+-- Selects text inside asterisks (Visual Mode)
+vim.keymap.set('x', 'i*', ':<C-u>normal! T*vt*<CR>', { silent = true })
+
+-- Maps the inner asterisk text object for operators like c, d, and y
+vim.keymap.set('o', 'i*', ':normal vi*<CR>', { silent = true })
 
 vim.opt.timeoutlen = 300
 -- Requires
