@@ -23,6 +23,15 @@ vim.keymap.set('x', 'i*', ':<C-u>normal! T*vt*<CR>', { silent = true })
 vim.keymap.set('o', 'i*', ':normal vi*<CR>', { silent = true })
 
 vim.opt.timeoutlen = 300
+
+-- Make netrw change working directory when you browse
+vim.g.netrw_keepdir = 0
+
+-- Optional: Better netrw settings
+vim.g.netrw_browse_split = 0  -- Open in same window
+vim.g.netrw_localcopydircmd = 'cp -r'
+vim.g.netrw_sizestyle = "H"
+--
 -- Requires
 require("config.lazy")
 require('config.options')
