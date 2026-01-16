@@ -1,0 +1,24 @@
+format = """trkBytes [$directory]($style)$character"""
+
+
+[directory]
+
+truncation_length = 3
+
+truncate_to_repo = true
+
+format = "[$path]($style) "
+
+style = "bold cyan"
+
+home_symbol = "~"
+
+truncation_symbol = "…/"
+
+
+[character]
+
+success_symbol = "[>](bold green)"
+
+error_symbol = "[>](bold green)"  # Same as success so it's not confusing
+
