@@ -56,6 +56,7 @@ alias moff='gsettings set org.gnome.desktop.peripherals.touchpad send-events dis
 alias mon='gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled'
 
 
+eval "$(rm  '/home/trkbytes/.cache/tmux-powerkit/keybinding_conflicts.log')"
 # Initialize Starship (MUST be before tmux auto-start)
 
 eval "$(starship init bash)"
@@ -72,3 +73,4 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
     exec tmux
 
 fi 
+export PATH="$HOME/.cargo/bin:$PATH"
