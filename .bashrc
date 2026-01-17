@@ -56,7 +56,11 @@ alias moff='gsettings set org.gnome.desktop.peripherals.touchpad send-events dis
 alias mon='gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled'
 
 
-eval "$(rm  '/home/trkbytes/.cache/tmux-powerkit/keybinding_conflicts.log')"
+FILE="/home/trkbytes/.cache/tmux-powerkit/keybinding_conflicts.log"
+
+if [ -e "$FILE" ]; then 
+    rm -f "$FILE"
+fi
 # Initialize Starship (MUST be before tmux auto-start)
 
 eval "$(starship init bash)"
