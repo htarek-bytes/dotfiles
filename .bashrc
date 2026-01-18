@@ -9,7 +9,6 @@ if [ -f /etc/bashrc ]; then
 fi
 
 
-# User specific environment
 
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
 
@@ -20,12 +19,9 @@ fi
 export PATH
 
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
 
-# export SYSTEMD_PAGER=
+alias get_idf='. $HOME/esp/esp-idf/export.sh'
 
-
-# User specific aliases and functions
 
 if [ -d ~/.bashrc.d ]; then
 
