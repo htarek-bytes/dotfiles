@@ -51,12 +51,9 @@ alias moff='gsettings set org.gnome.desktop.peripherals.touchpad send-events dis
 
 alias mon='gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled'
 
-# Mouse Toggle for MacBook Pro 2017
-# Correct syntax with brackets []
-# Silent Mouse Toggle
-alias moff='hyprctl keyword "device[apple-spi-touchpad]:enabled" false > /dev/null'
-alias mon='hyprctl keyword "device[apple-spi-touchpad]:enabled" true > /dev/null'
-
+# Mouse Toggle for MacBook Pro 2017 (Hyprland)
+alias moff='hyprctl keyword "device[apple-spi-touchpad]:enabled" false > /dev/null 2>&1'
+alias mon='hyprctl keyword "device[apple-spi-touchpad]:enabled" true > /dev/null 2>&1'
 FILE="/home/trkbytes/.cache/tmux-powerkit/keybinding_conflicts.log"
 
 if [ -e "$FILE" ]; then 
