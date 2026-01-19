@@ -1,0 +1,76 @@
+/* --- CYBERPUNK WAYBAR THEME --- */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+window#waybar {
+    background-color: #050a0f; /* Pitch Black */
+    border-bottom: 2px solid #00f0ff; /* Neon Cyan Border */
+    color: #00f0ff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+/* The Modules (Clock, Battery, etc) */
+#clock,
+#battery,
+#network,
+#pulseaudio,
+#tray {
+    background-color: #050a0f;
+    color: #00f0ff; /* Cyan Text */
+    padding: 0 10px;
+    margin: 4px 0px;
+    border-radius: 0px; /* Sharp Corners */
+    border: 1px solid #00f0ff; /* Thin Cyan Border */
+}
+
+/* Workspaces (The "1 2 3 4" on the left) */
+#workspaces {
+    background: #050a0f;
+    margin: 4px 4px;
+    padding: 0 5px;
+    border: 1px solid #00f0ff;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: #00f0ff; /* Cyan Numbers */
+    border-radius: 0px;
+}
+
+#workspaces button.active {
+    color: #050a0f; /* Black Text */
+    background-color: #00f0ff; /* Cyan Background */
+    border-bottom: 2px solid #ff003c; /* Red Accent Line */
+}
+
+#workspaces button:hover {
+    background: #ff003c; /* Cyber Red Hover */
+    color: #ffffff;
+}
+
+/* Battery States */
+#battery.charging, #battery.plugged {
+    color: #050a0f;
+    background-color: #00f0ff;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #ff003c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Audio Muted */
+#pulseaudio.muted {
+    background-color: #ff003c;
+    color: #ffffff;
+}

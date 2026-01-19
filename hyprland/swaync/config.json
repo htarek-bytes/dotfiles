@@ -1,0 +1,54 @@
+{
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "overlay",
+  "control-center-width": 380,
+  "control-center-margin-top": 15,
+  "control-center-margin-bottom": 15,
+  "control-center-margin-right": 15,
+  "control-center-margin-left": 15,
+  "notification-icon-size": 48,
+  "notification-body-image-height": 100,
+  "notification-body-image-width": 200,
+  "timeout": 10,
+  "timeout-low": 5,
+  "timeout-critical": 0,
+  "fit-to-screen": false,
+  "control-center-layer": "top",
+  "org.gnome.ControlCenter": true,
+  "hide-on-clear": true,
+  "hide-on-action": true,
+  "widgets": [
+    "label",
+    "buttons-grid",
+    "mpris",
+    "volume",
+    "backlight",
+    "dnd",
+    "notifications"
+  ],
+  "widget-config": {
+    "label": {
+      "text": "SYSTEM SYSTEMS // ONLINE",
+      "max-lines": 1
+    },
+    "buttons-grid": {
+      "actions": [
+        { "label": "NET", "command": "gnome-control-center wifi", "type": "toggle" },
+        { "label": "BT", "command": "gnome-control-center bluetooth", "type": "toggle" },
+        { "label": "SET", "command": "gnome-control-center", "type": "normal" },
+        { "label": "TERM", "command": "ptyxis", "type": "normal" },
+        { "label": "EXIT", "command": "hyprctl dispatch exit", "type": "normal" }
+      ]
+    },
+    "mpris": {
+      "image-size": 80,
+      "image-radius": 0
+    },
+    "volume": { "label": "VOL" },
+    "backlight": {
+        "label": "BRI",
+        "device": "acpi_video0" 
+    }
+  }
+}
