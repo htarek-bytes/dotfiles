@@ -32,6 +32,23 @@ vim.g.netrw_browse_split = 0  -- Open in same window
 vim.g.netrw_localcopydircmd = 'cp -r'
 vim.g.netrw_sizestyle = "H"
 --
+-- ==========================================
+-- Override Theme Colors (Fix invisible comments)
+-- ==========================================
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "*",
+  callback = function()
+    -- Bright cyan and italic for all comments
+    vim.api.nvim_set_hl(0, 'Comment', { fg = '#89dceb', italic = true })
+    vim.api.nvim_set_hl(0, '@comment', { fg = '#89dceb', italic = true }) 
+    
+    -- Light gray/blue for standard line numbers
+    vim.api.nvim_set_hl(0, 'LineNr', { fg = '#cdd6f4' })
+    
+    -- Bright yellow and bold for the current line number
+    vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#f9e2af', bold = true })
+  end,
+})
 -- Requires
 require("config.lazy")
 require('config.options')
