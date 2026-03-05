@@ -29,6 +29,6 @@ WALLPAPER="${WALLPAPERS[$CURRENT_INDEX]}"
 
 # Kill swaybg and restart with new wallpaper
 pkill swaybg
-swaybg -i "$WALLPAPER" &
+swww img "$WALLPAPER"
 
 notify-send "Wallpaper Changed" "$(basename "$WALLPAPER")"
