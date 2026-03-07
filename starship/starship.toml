@@ -3,13 +3,13 @@ format = """trkBytes [$directory]($style)$character"""
 
 [directory]
 
+style = "fg:#cba6f7 bold" # A vibrant purple
+
 truncation_length = 0
 
 truncate_to_repo = false
 
 format = "[$path]($style) "
-
-style = "bold cyan"
 
 home_symbol = "~"
 
@@ -18,7 +18,12 @@ truncation_symbol = "…/"
 
 [character]
 
-success_symbol = "[>](bold green)"
+success_symbol = "[❯](fg:#f5c2e7)" # A vibrant pink
 
 error_symbol = "[>](bold green)"  # Same as success so it's not confusing
 
+[hostname]
+disabled = true
+
+[username]
+disabled = true

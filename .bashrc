@@ -71,8 +71,9 @@ eval "$(starship init bash)"
 # and not already inside a tmux/screen session.
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-
-    exec tmux
-
+    exec tmux new-session -A -s main fish
 fi 
+
 export PATH="$HOME/.cargo/bin:$PATH"
+
+export PIPEWIRE_LATENCY="256/48000"

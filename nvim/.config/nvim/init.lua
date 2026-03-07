@@ -54,3 +54,4 @@ require("config.lazy")
 require('config.options')
 require('config.Keybinds')
 vim.opt.undofile = true
+vim.opt.termguicolors = true
