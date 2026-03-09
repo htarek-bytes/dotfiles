@@ -1,1 +1,0 @@
-/home/trkbytes/.dotfiles/shared/scripts/hide_window.sh

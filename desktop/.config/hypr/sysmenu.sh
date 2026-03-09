@@ -1,1 +1,0 @@
-/home/trkbytes/.dotfiles/shared/scripts/sysmenu.sh

@@ -1,1 +1,0 @@
-/home/trkbytes/.dotfiles/shared/scripts/screenshot_active.sh
