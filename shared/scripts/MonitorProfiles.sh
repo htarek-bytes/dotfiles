@@ -9,7 +9,7 @@ fi
 
 # Variables
 iDIR="$HOME/.config/swaync/images"
-SCRIPTSDIR="$HOME/.config/hypr/scripts"
+SCRIPTSDIR="$HOME/scripts"
 monitor_dir="$HOME/.config/hypr/Monitor_Profiles"
 target="$HOME/.config/hypr/monitors.conf"
 rofi_theme="$HOME/.config/rofi/config-Monitors.rasi"

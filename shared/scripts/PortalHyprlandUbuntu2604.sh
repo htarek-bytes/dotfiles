@@ -8,8 +8,8 @@ if [[ -r /etc/os-release ]]; then
   # shellcheck disable=SC1091
   . /etc/os-release
   if [[ "${ID:-}" == "ubuntu" && "${VERSION_ID:-}" == "26.04" ]]; then
-    if [[ -x "$HOME/.config/hypr/scripts/PortalHyprland.sh" ]]; then
-      "$HOME/.config/hypr/scripts/PortalHyprland.sh"
+    if [[ -x "$HOME/scripts/PortalHyprland.sh" ]]; then
+      "$HOME/scripts/PortalHyprland.sh"
     fi
   fi
 fi

@@ -118,8 +118,8 @@ if wallust theme -- "${choice}"; then
   fi
 
   # Refresh bars/menus after files are ready
-  if [ -x "$HOME/.config/hypr/scripts/Refresh.sh" ]; then
-    "$HOME/.config/hypr/scripts/Refresh.sh" >/dev/null 2>&1 || true
+  if [ -x "$HOME/scripts/Refresh.sh" ]; then
+    "$HOME/scripts/Refresh.sh" >/dev/null 2>&1 || true
   else
     if command -v waybar-msg >/dev/null 2>&1; then
       waybar-msg cmd reload >/dev/null 2>&1 || true

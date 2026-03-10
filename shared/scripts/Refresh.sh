@@ -2,7 +2,7 @@
 # /* ---- 💫 https://github.com/LinuxBeginnings 💫 ---- */  ##
 # Scripts for refreshing ags, waybar, rofi, swaync, wallust
 
-SCRIPTSDIR=$HOME/.config/hypr/scripts
+SCRIPTSDIR=$HOME/scripts
 UserScripts=$HOME/.config/hypr/UserScripts
 
 # Define file_exists function

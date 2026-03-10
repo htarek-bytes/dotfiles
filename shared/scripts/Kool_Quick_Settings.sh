@@ -17,7 +17,7 @@ UserConfigs="$HOME/.config/hypr/UserConfigs"
 rofi_theme="$HOME/.config/rofi/config-edit.rasi"
 msg=' ⁉️ Choose what to do ⁉️'
 iDIR="$HOME/.config/swaync/images"
-scriptsDir="$HOME/.config/hypr/scripts"
+scriptsDir="$HOME/scripts"
 UserScripts="$HOME/.config/hypr/UserScripts"
 
 # Function to show info notification

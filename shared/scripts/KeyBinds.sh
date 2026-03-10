@@ -23,7 +23,7 @@ files=("$keybinds_conf" "$user_keybinds_conf")
 
 # Parse binds using the python script for speed
 # The last argument must be the user config for override logic to work correctly
-display_keybinds=$("$HOME/.config/hypr/scripts/keybinds_parser.py" "${files[@]}")
+display_keybinds=$("$HOME/scripts/keybinds_parser.py" "${files[@]}")
 
 # Check for suggestions file created by python script
 if [[ -f "/tmp/hypr_keybind_suggestions_file" ]]; then
