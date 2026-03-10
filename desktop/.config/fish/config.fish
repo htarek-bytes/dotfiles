@@ -3,24 +3,20 @@ set -gx COLORTERM truecolor
 
 function fish_greeting
     set -l mauve "CBA6F7"
-    
-    # 1. Tenter d'agrandir la police (ne fonctionne pas sur tous les terminaux)
-    # On envoie un code de contrôle pour changer la taille
-    echo -e "\e]50;SetFont=JetBrainsMono Nerd Font:size=30\a"
-
-    # 2. Affichage de la Basmalah
-    echo ""
     set_color $mauve --bold
+
     set -l width (tput cols)
-    set -l pad (math -s0 "($width - 10) / 2")
-    echo (string repeat -n $pad " ")(printf "\uFDFD")
+    # ﷽ renders as 1 col wide; adjust to 2 if it looks off-center
+    set -l pad (math -s0 "($width - 1) / 2")
+    set -l pad_str (string repeat -n $pad " ")
+
+    echo ""
+    # \e#3 = top half of double-height line
+    # \e#4 = bottom half — must repeat the exact same content
+    printf "\e#3%s\uFDFD\n" $pad_str
+    printf "\e#4%s\uFDFD\n" $pad_str
     echo ""
 
-    # 3. On attend un peu pour que tu puisses la voir
-    sleep 0.1
-
-    # 4. On réinitialise à la taille normale (ex: 12)
-    echo -e "\e]50;SetFont=JetBrainsMono Nerd Font:size=12\a"
     set_color normal
 end
 
